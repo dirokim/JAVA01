@@ -21,11 +21,12 @@ public class Study4For {
 			}
 	
 		}else if(num ==2) {
-			for(int i=1;i<=3;i++) {
-				for(int j = 1; j<31;j++) {
+			for(int i=1;i<=2;i++) {
+				for(int j = 0; j<=29;j++) {
 					j+=10;
-					j-=1;
+					
 					System.out.println(j);
+					j-=1;
 				}
 			}
 		}
