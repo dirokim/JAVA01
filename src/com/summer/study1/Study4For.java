@@ -40,17 +40,15 @@ public class Study4For {
 				if(userid==id && userpw==pw) {
 					System.out.println("로그인 되었습니다");
 					break;
-				}else {System.out.println("로그인 실패");
-				}
-			}else {
-				yes=false;
-			}
+				}else {System.out.println("로그인 실패");}
+			}else {yes=false;}
 		}
 			
 		if(yes==true) {
+			System.out.println("게임시작");
 			for(int i =1;i<=14;i++) {
 					num +=3;
-				for(int j = 1;j<=num;j++) {
+			for(int j = 1;j<=num;j++) {
 					System.out.println(j+"마리 잡았습니다.");
 					}
 					System.out.println("축하합니다 레벨업하셨습니다!!현제레벨:"+i);
@@ -61,11 +59,9 @@ public class Study4For {
 			}
 
 			if(i==14){
-				System.out.println("최종레벨:"+i+"최종골드:"+gold);
-				
-			}
+				System.out.println("최종레벨:"+i+"최종골드:"+gold);}
 		}
 		
 		}
-	}
+}
 }
