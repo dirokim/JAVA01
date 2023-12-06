@@ -10,5 +10,6 @@ public class Study4For {
 		//2.점사모드 10발
 		
 
+		
 	}
 }
