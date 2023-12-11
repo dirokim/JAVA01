@@ -2,16 +2,19 @@ package com.summer.study3.rpg;
 
 public class RpgMain {
 	public static void main(String[]args) {
+		Magiction magiction = new Magiction();
+	
+		magiction.name="winter";
+		magiction.hp=100;
+		magiction.mp=200;
 		
-		Magiction rpg = new Magiction();
-		rpg.job="healer";
-		rpg.level=15;
-		rpg.damage=1000.5;
-		
-		Magiction rpg2 = new Magiction();
-		rpg2.job="dealer";
-		rpg2.level=25;
-		rpg2.damage=4000.5;
+		Magiction magiction2 = new Magiction();
+		magiction2.name="winter";
+		magiction.hp=100;
+		magiction.info();
+		System.out.println(magiction);
+		magiction2.info();
+		System.out.println(magiction2);
 		
 		
 	}
