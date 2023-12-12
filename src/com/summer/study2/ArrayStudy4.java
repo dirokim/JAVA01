@@ -1,4 +1,4 @@
-package com.summer.study1;
+package com.summer.study2;
 
 import java.util.Scanner;
 
@@ -56,24 +56,16 @@ public class ArrayStudy4 {
 			System.out.println(number1[k]);
 			System.out.println(name[k]);
 			System.out.println(grade[k]);
-		}else if(num1==4) {
-			System.out.println("4성적순 출력");
-			for(int i = 0;i<grade.length-1;i++) {
-				for(int j=0;j<grade.length-1;j++) {
-					if(grade[i]>grade[j]) {
-						int sum = grade[i];
-						grade[j]= grade[i];
-						grade[i]= sum;
-					}
-				}
-			}
+		}
+				
 			
 			
-		}else if(num1==5) {
+			
+		} if(num1==5) {
 			System.out.println("5.프로그램 종료");
 			
 		}
-		}	
+			
 	}
 }
 }			

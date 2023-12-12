@@ -10,6 +10,12 @@ public class SchoolView {
 		System.out.println("점수 :"+students[i].jumsu);
 		
 		}
+		
 	}
+	public void view(Student [] students) {
+		for(int i=0;i<students.length;i++) {
+			this.view(students[i]);
+		}
 	
+}
 }

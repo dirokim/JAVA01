@@ -1,4 +1,4 @@
-package com.summer.study1;
+package com.summer.study2;
 
 public class ArrayStudy3 {
 

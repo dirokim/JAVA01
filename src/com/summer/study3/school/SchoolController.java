@@ -26,6 +26,13 @@ public class SchoolController {
 					schoolView.view(students);
 				}else if(num==3) {
 					System.out.println("3.학생정보검색");
+					Student s = schoolService.findByNum(students);
+					if(s != null) {
+						schoolView.view(s);
+					}else {
+						schoolView.view("학생이 없다");
+					}
+					break;
 				}else if(num==4) {
 					System.out.println("4.학생정보추가");
 				students = schoolService.addStudent(students);

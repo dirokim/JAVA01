@@ -1,4 +1,4 @@
-package com.summer.study1;
+package com.summer.study2;
 
 import java.util.Scanner;
 

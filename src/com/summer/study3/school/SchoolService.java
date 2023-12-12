@@ -32,7 +32,7 @@ public class SchoolService {
 		
 	}
 	
-	public void addStudent(Student[]students) {
+	public Student [] addStudent(Student[]students) {
 		Scanner sc = new Scanner(System.in);
 		Student student = new Student();
 		System.err.println("이름을 입력");
@@ -46,24 +46,27 @@ public class SchoolService {
 		for(int i=0;i<students.length;i++) {
 			newStudents[i]=students[i];
 		}
-		newStudents[student.length] = students;
+		newStudents[students.length] = student;
 		
+		return newStudents;
 		
+
 		
+	}
+	public Student findByNum(Student [] students) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("검색할 학생 번호 입력");
+		int num = sc.nextInt();
+		Student student= null;
+		for(int i=0;i<students.length;i++) {
+			if(num==students[i].num) {
+				//return students[i];
+				student = students[i];
+				break;
+			}
+		}
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		return student;
 		
 	}
 }
