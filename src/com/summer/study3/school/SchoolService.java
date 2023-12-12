@@ -31,5 +31,40 @@ public class SchoolService {
  		return students;
 		
 	}
+	
+	public void addStudent(Student[]students) {
+		Scanner sc = new Scanner(System.in);
+		Student student = new Student();
+		System.err.println("이름을 입력");
+		student.name = sc.next();
+		System.err.println("번호를 입력");
+		student.name = sc.next();
+		System.err.println("학점을 입력");
+		student.jumsu = sc.nextDouble();
+		
+		Student [] newStudents = new Student[students.length+1];
+		for(int i=0;i<students.length;i++) {
+			newStudents[i]=students[i];
+		}
+		newStudents[student.length] = students;
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
 }
 

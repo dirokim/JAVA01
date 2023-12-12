@@ -28,6 +28,7 @@ public class SchoolController {
 					System.out.println("3.학생정보검색");
 				}else if(num==4) {
 					System.out.println("4.학생정보추가");
+				students = schoolService.addStudent(students);
 				}else if(num==5) {
 					System.out.println("5.프로그램종료");
 					check = true;
