@@ -3,7 +3,9 @@ package com.summer.study3.school;
 import java.util.Scanner;
 
 public class SchoolController {
-
+	
+	
+	
 		public void start() {
 			Scanner sc = new Scanner(System.in);
 			SchoolService schoolService = new SchoolService();

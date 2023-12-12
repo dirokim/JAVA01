@@ -1,21 +1,18 @@
 package com.summer.study3.rpg;
 
-public class Magiction {
+public class Magiction extends Character {
 	
-
-	String name;
-	int hp;
-	int mp;
+	
+	private int mp;
+	
+	
 	
 	public void info() {
 		//String name = "abc";
 		//맴버 메서드 내에서 멤버 변수를 접근해서 사용 가능
 		//name="iu";
-		System.out.println(this);
-		System.out.println("Name:"+this.name);
-		System.out.println("HP:"+this.hp);
-		this.t1();
-		t1();
+	super.superInfo();
+	System.out.println(this.mp);
 	}
 
 	
@@ -23,4 +20,15 @@ public class Magiction {
 		System.out.println("Test 메서드 입니다");
 		this.info();
 	}
+
+
+	public int getMp() {
+		return mp;
+	}
+
+
+	public void setMp(int mp) {
+		this.mp = mp;
+	}
+	
 }
