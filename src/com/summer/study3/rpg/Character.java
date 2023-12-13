@@ -9,7 +9,7 @@ public abstract class Character {
 		System.out.println(this.name);
 		System.out.println(this.hp);
 	}
-	public abstract void attack() {
+	public  void attack() {
 
 	}
 	
