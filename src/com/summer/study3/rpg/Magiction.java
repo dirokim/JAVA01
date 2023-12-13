@@ -30,5 +30,13 @@ public class Magiction extends Character {
 	public void setMp(int mp) {
 		this.mp = mp;
 	}
+
+
+	@Override
+	public void attack() {
+		// TODO Auto-generated method stub
+		
+	}
+	
 	
 }
