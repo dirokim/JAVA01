@@ -12,7 +12,7 @@ public class StudySetInfo {
 	int num=0;
 	Random random = new Random();
 	public void ex0 () {
-		
+		//배열 통해서
 	}
 	public ArrayList<Integer> ex1() {
 			//6개 구해서 보관
@@ -24,16 +24,11 @@ public class StudySetInfo {
 		while(ar.size()<6) {
 			num = random.nextInt(45)+1;
 			ar.add(num);
-				for(int i=1;i<ar.size();i++) {
-					
-					for(int j=0;i<ar.size();j++) {
-						if(ar.get(i)!=ar.get(j)) {
+				//contains
 							
-						
-					}
 					
-					}
-				}
+				
+				
 		}
 	}
 	public void ex2 (ArrayList<Integer> ar) {
@@ -47,7 +42,9 @@ public class StudySetInfo {
 		}
 		Iterator<Integer> it = hr.iterator();
 		while(it.hasNext()) {
-			System.out.println(it.next());
+			Integer num = it.next();
+			System.out.println(num);
+			
 		}
 		
 			}
