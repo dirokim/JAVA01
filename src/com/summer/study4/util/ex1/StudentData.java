@@ -1,6 +1,6 @@
 package com.summer.study4.util.ex1;
 
-public class Student {
+public class StudentData {
 
 	private String name;
 	private int korean;

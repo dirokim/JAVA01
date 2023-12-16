@@ -4,12 +4,14 @@ import java.util.ArrayList;
 
 public class StudentView {
 
+		
 	//학생들의 모든 정보를 출력
-	public void view(ArrayList<Student> students1) {
+	public void view(ArrayList<Student>students) {
 		//향상된 포문
 		//for(모은데이터타입 변수명:collection 변수명){ 컬렉션에서 변수명에담을떄
-			for(Student student1:students1) {
-				System.out.println(student1.getName());
+			for(Student student:students) {
+				System.out.println(student.getName());
+				System.out.println(student.getAvg());
 			}
 		
 		

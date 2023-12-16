@@ -18,30 +18,36 @@ public class StudentService {
 	
 	}
 		
-	public ArrayList<Student> init() {
-		 StringTokenizer students = new StringTokenizer(info,"-");
-		 ArrayList<Student> students1 = new ArrayList<>();
-		 while(students.hasMoreElements()) {
-				Student student = new Student();
+	public ArrayList<StudentData> init() {
+		 StringTokenizer students1 = new StringTokenizer(info,"-");
+		 ArrayList<StudentData> students = new ArrayList<>();
+		 while(students1.hasMoreElements()) {
+				StudentData student = new StudentData();
 			 student.setName(student.getName());
-			 student.setNumber(Integer.parseInt(students.nextToken()));
-			 student.setKorean(Integer.parseInt(students.nextToken()));
-			 student.setEnglish(Integer.parseInt(students.nextToken()));
-			 student.setMath(Integer.parseInt(students.nextToken()));
+			 student.setNumber(Integer.parseInt(students1.nextToken()));
+			 student.setKorean(Integer.parseInt(students1.nextToken()));
+			 student.setEnglish(Integer.parseInt(students1.nextToken()));
+			 student.setMath(Integer.parseInt(students1.nextToken()));
 			 student.setTotal(student.getKorean()+student.getEnglish()+student.getMath());
 			 student.setAvg(student.getTotal()/3);
-			 students1.add(student);
+			 students.add(student);
 			
 		 }
-		 return students1;
+		 return students;
 	}
-	public void findByName(ArrayList<Student> students1) {
+	public void findByName(ArrayList<StudentData> students) {
 		System.out.println("학생 이름을 입력하세요");
 		String name = sc.next();
-		for(int i=0;i<students1.size();i++) {
+		for(int i=0;i<students.size();i++) {
 			
-			if(name==students1.get(i).getName()) {
-				System.out.println(students1.get(i));
+			if(students.get(i).getName()==name) {
+				System.out.println(students.get(i).getName());
+				System.out.println(students.get(i).getNumber());
+				System.out.println(students.get(i).getKorean());
+				System.out.println(students.get(i).getEnglish());
+				System.out.println(students.get(i).getMath());
+				System.out.println(students.get(i).getTotal());
+				System.out.println(students.get(i).getAvg());
 			}
 		}
 		
