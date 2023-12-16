@@ -18,7 +18,8 @@ public class StudentController {
 		}
 	
 	public void start() {
-		studentService.init();
+		ArrayList<StudentData> students = new ArrayList<StudentData>();
+		students =studentService.init();
 		boolean check=true;
 		while(check){
 			
@@ -37,8 +38,10 @@ public class StudentController {
 					studentService.findByName(students);
 				}else if(num==3) {
 					System.out.println("3.학생정보추가");
+					
 				}else if(num==4) {
 					System.out.println("4.학생정보삭제");
+					
 				}else if(num==5) {
 					
 				}else {
@@ -49,4 +52,38 @@ public class StudentController {
 				
 		}
 	}
+
+	public Scanner getSc() {
+		return sc;
+	}
+
+	public void setSc(Scanner sc) {
+		this.sc = sc;
+	}
+
+	public StudentService getStudentService() {
+		return studentService;
+	}
+
+	public void setStudentService(StudentService studentService) {
+		this.studentService = studentService;
+	}
+
+	public StudentView getStudentView() {
+		return studentView;
+	}
+
+	public void setStudentView(StudentView studentView) {
+		this.studentView = studentView;
+	}
+
+	public StudentData getStudentdata() {
+		return studentdata;
+	}
+
+	public void setStudentdata(StudentData studentdata) {
+		this.studentdata = studentdata;
+	}
+	
+	
 }

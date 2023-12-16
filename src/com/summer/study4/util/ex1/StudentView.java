@@ -6,10 +6,10 @@ public class StudentView {
 
 		
 	//학생들의 모든 정보를 출력
-	public void view(ArrayList<Student>students) {
+	public void view(ArrayList<StudentData>students) {
 		//향상된 포문
 		//for(모은데이터타입 변수명:collection 변수명){ 컬렉션에서 변수명에담을떄
-			for(Student student:students) {
+			for(StudentData student:students) {
 				System.out.println(student.getName());
 				System.out.println(student.getAvg());
 			}
@@ -18,21 +18,19 @@ public class StudentView {
 		
 		
 		
-		//		for(int i=0;i<students1.size();i++) {
-//			System.out.println(students1.get(i).getName());
-//			
-//		}
+	
+	
 	}
 	
 	
 	
 	//학생 한명의 모든 정보를 출력
-	public void view(ArrayList<Student> students1) {
-		
-	}
-	public void view(ArrayList<Student> students1) {
-		
-	}
+//	public void view(ArrayList<StudentData> students) {
+//		
+//	}
+//	public void view(ArrayList<StudentData> students) {
+//		
+//	}
 	//메세지를 추력
 	
 	
