@@ -52,8 +52,23 @@ public class StudentService {
 		}
 		
 	}
-	public void studentAdd() {
+	public ArrayList<StudentData> studentAdd(ArrayList<StudentData> students) {
+				System.out.println("학생 정보 추가");
+				StudentData student = new StudentData();
+				System.out.println("학생 이름은?");
+				student.setName(sc.next());
+				System.out.println("학생 번호는 ?");
+				student.setNumber(sc.nextInt());
+				System.out.println("학생 국어 점수");
+				student.setKorean(sc.nextInt());
+				System.out.println("학생 영어 점수");
+				student.setEnglish(sc.nextInt());
+				System.out.println("학생 수학 점수");
+				student.setMath(sc.nextInt());
+				students.add(student);
+				
 		
+		return students;
 	}
 	public void studentDelete() {
 		

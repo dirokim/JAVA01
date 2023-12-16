@@ -38,7 +38,7 @@ public class StudentController {
 					studentService.findByName(students);
 				}else if(num==3) {
 					System.out.println("3.학생정보추가");
-					
+				students = studentService.studentAdd(students);
 				}else if(num==4) {
 					System.out.println("4.학생정보삭제");
 					
