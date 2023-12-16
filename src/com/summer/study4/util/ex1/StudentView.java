@@ -1,6 +1,7 @@
 package com.summer.study4.util.ex1;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class StudentView {
 
@@ -12,6 +13,8 @@ public class StudentView {
 			for(StudentData student:students) {
 				System.out.println(student.getName());
 				System.out.println(student.getAvg());
+				System.out.println("=========================");
+				
 			}
 		
 		
@@ -25,8 +28,10 @@ public class StudentView {
 	
 	
 	//학생 한명의 모든 정보를 출력
-//	public void view(ArrayList<StudentData> students) {
+//	public ArrayList<StudentData> view(ArrayList<StudentData> students) {
 //		
+//		
+//		return students;
 //	}
 //	public void view(ArrayList<StudentData> students) {
 //		

@@ -41,7 +41,7 @@ public class StudentController {
 				students = studentService.studentAdd(students);
 				}else if(num==4) {
 					System.out.println("4.학생정보삭제");
-					
+				students = studentService.studentDelete(students);
 				}else if(num==5) {
 					
 				}else {

@@ -70,8 +70,19 @@ public class StudentService {
 		
 		return students;
 	}
-	public void studentDelete() {
-		
+	public ArrayList<StudentData> studentDelete(ArrayList<StudentData>students) {
+				System.out.println("삭제할 학생 이름은 ?");
+				String var1 = sc.next();
+				for(int i=0;i<students.size();i++) {
+					if(var1==students.get(i).getName()) {
+						students.remove(i);
+					}
+					
+					
+				}
+				
+				
+				return students;
 	}
 	//init 메소드 준비 
 	//info 를 pasing 해서 스튜던트 클래스 선언 멤버선언  + 총점 평균 
