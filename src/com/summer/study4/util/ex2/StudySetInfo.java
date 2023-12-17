@@ -13,18 +13,28 @@ public class StudySetInfo {
 	Random random = new Random();
 	public void ex0 () {
 		//배열 통해서
-		StudySetInfo [] numbers;
+		StudySetInfo [] numbers = new StudySetInfo[6];
 		
+			boolean check = true;
+			while(true) {
+				int k = 1;
+				num = random.nextInt(45)-1;
+			for(int i=0;i>numbers.length;i++) {
+				StudySetInfo number = new StudySetInfo();
+				number.setNumber(num);
+
+				if(numbers[i+1]!=numbers[i]){
+					numbers[i]=number;
+				}
+				
+			}
+			
 		
 			
-			for(int i=0;i<6;i++) {
-				StudySetInfo number = new StudySetInfo();
-				num = random.nextInt(45)-1;
-				number.setNumber(num);
-				numbers[i]=number.getNumber();
-						
+			
+			
+			
 			}
-		
 
 		
 		
