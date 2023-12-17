@@ -13,12 +13,15 @@ public class StudySetInfo {
 	Random random = new Random();
 	public void ex0 () {
 		//배열 통해서
-		StudySetInfo [] numbers = new StudySetInfo[6];
+		StudySetInfo [] numbers = new StudySetInfo[1];
 		
 			boolean check = true;
 			while(true) {
 				int k = 1;
 				num = random.nextInt(45)-1;
+				StudySetInfo number = new StudySetInfo();
+				number.setNumber(num);
+				numbers[0]=number;
 			for(int i=0;i>numbers.length;i++) {
 				StudySetInfo number = new StudySetInfo();
 				number.setNumber(num);
@@ -39,7 +42,7 @@ public class StudySetInfo {
 		
 		
 	}
-	public ArrayList<Integer> ex1() {
+	public void ex1() {
 			//6개 구해서 보관
 			//ArrayList
 		
