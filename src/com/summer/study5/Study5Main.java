@@ -20,7 +20,7 @@ public class Study5Main {
 //		
 //		System.out.println(str.toString());
 		
-		Test t = new Test();
+		
 		int [] arr = new int[2];
 		//RuntimeException
 		arr[3] = 10;
@@ -35,7 +35,7 @@ public class Study5Main {
 			//예외가 발생하든 안하든 실행
 		}
 		System.out.println("정상 진행 ");
-		
+		Test t = new Test();
 		int a = 10;
 		a = a/0;
 		new ArithmeticException();
