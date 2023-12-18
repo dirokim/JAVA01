@@ -10,13 +10,14 @@ public class StudyMap {
 		HashMap<String, Integer> map = new HashMap<>();
 		map.put("k1", 1);
 		map.put("k2", 2);
+		map.put("k1", 200);
 		System.out.println(map);
 		Integer num =  map.get("k2");
 		System.out.println(num);
 		
 		Set<Stirng> k = map.keySet();
 		Iterator<String>keys= k.iterator();
-		wild(keys.hasNext()){
+		while(keys.hasNext()){
 			String key = keys.next();
 			System.out.println("key : "+key);
 			System.out.println(map.get(key));

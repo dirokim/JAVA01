@@ -38,6 +38,7 @@ public class StudentService {
 	public void findByName(ArrayList<StudentData> students) {
 		System.out.println("학생 이름을 입력하세요");
 		String name = sc.next();
+		StudentData st = null;
 		for(int i=0;i<students.size();i++) {
 			
 			if(students.get(i).getName()==name) {
@@ -48,8 +49,11 @@ public class StudentService {
 				System.out.println(students.get(i).getMath());
 				System.out.println(students.get(i).getTotal());
 				System.out.println(students.get(i).getAvg());
+				break;
 			}
+			
 		}
+		
 		
 	}
 	public ArrayList<StudentData> studentAdd(ArrayList<StudentData> students) {
@@ -65,6 +69,8 @@ public class StudentService {
 				student.setEnglish(sc.nextInt());
 				System.out.println("학생 수학 점수");
 				student.setMath(sc.nextInt());
+				student.setTotal(student.getKorean()+student.getEnglish()+student.getMath());
+				student.setAvg(student.getTotal()/3.0);
 				students.add(student);
 				
 		
@@ -76,9 +82,7 @@ public class StudentService {
 				for(int i=0;i<students.size();i++) {
 					if(var1==students.get(i).getName()) {
 						students.remove(i);
-					}
-					
-					
+					}	
 				}
 				
 				
