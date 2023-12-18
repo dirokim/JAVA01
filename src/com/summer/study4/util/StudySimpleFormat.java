@@ -14,7 +14,9 @@ public class StudySimpleFormat {
 		String d = "2020-12-24";
 		sd.applyPattern("yyyy-mm-dd");//2023-12-18
 		
-		calendar =  sd.getCalendar();
+		Date date = sd.parse(d);
+		
+		
 		System.out.println(calendar.getTime());
 	}
 
