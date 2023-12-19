@@ -10,15 +10,20 @@ public class StudySetInfo {
 	//1~45,6개
 	private int number;
 	int num=0;
-	Random random = new Random();
+	
 	public void ex0 () {
 		//배열 통해서
 		
-		StudySetInfo [] numbers = new StudySetInfo[6];
+		int [] numbers = new int[6];
 		Random random = new Random();
 			for(int i=0;i<numbers.length;i++) {
-				numbers[i] = random.nextInt(45)+1;
-				
+				numbers[i] = random.nextInt(44)+1;
+				for(int j=0;j<i;j++) {
+					if(numbers[i]==numbers[j]) {
+						i--;
+						break;
+					}
+				}
 				
 				
 			}
@@ -50,7 +55,7 @@ public class StudySetInfo {
 		//HashSet
 		HashSet<Integer> hr = new HashSet<>();
 		
-		
+		Random random = new Random();
 		while(hr.size()!=6) {
 			hr.add(random.nextInt(45)+1);
 		}
