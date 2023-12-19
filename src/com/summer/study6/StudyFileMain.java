@@ -7,7 +7,7 @@ public class StudyFileMain {
 
 		StudyFile sf = new StudyFile();
 		try {
-			sf.f3();
+			sf.f4();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
