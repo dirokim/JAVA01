@@ -1,15 +1,66 @@
 package com.summer.study6;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
 
 public class StudyFile {
 	
+	public void f4() throws Exception {
+		
+		File file = new File("C:\\study\\test2.txt");
+		FileReader fr = new FileReader(file);
+		BufferedReader br = new BufferedReader(fr);
+		
+		while(true) {
+			String s = br.readLine();
+			if(s==null) {
+				break;
+			}else if(!s.equals("")) {
+				System.out.println(s);		
+			}
+			
+		}
+		//연결된 순서의 역순으로 해제
+		br.close();
+		fr.close();
+
+		
+	
+		
+	}
+	
+	
+	
+	
 	public void f3() throws Exception{
-		File file = new File("c:\\study\\test.txt");
-		FileWriter fw = new FileWriter(file,true); //기본값 false 덮어씌우다 true >append 추가
-		fw.write("hello");
-		fw.flush();
+		Scanner sc = new Scanner(System.in);
+		File file = new File("c:\\study\\test2.txt");
+//		FileWriter fw = new FileWriter(file,true); //기본값 false 덮어씌우다 true >append 추가
+		
+		FileWriter fw2 = new FileWriter(file,true);
+		boolean check = true;
+		while(check) {
+			System.out.println("입력하세요");
+			String num = sc.next();
+			fw2.write(num);
+			fw2.flush();
+			if(num.toUpperCase().equals("EXIT")){
+				break;
+			}
+			
+		}
+		
+		
+//		fw.write("winter"+"\n\r");//exit 입력
+//		fw.flush();
+//		fw.close(); //자원 종료
+		
+		
+		
 	}
 	
 	
