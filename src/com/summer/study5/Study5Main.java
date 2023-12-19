@@ -26,7 +26,8 @@ public class Study5Main {
 		arr[3] = 10;
 //		new ArrayIndexOutOfBoundsException();
 		}catch(InputMismatchException e) {
-			
+			System.out.println(e.getMessage());
+			e.printStackTrace();
 		}catch(ArrayIndexOutOfBoundsException e){
 			
 		}catch(RuntimeException e) {
