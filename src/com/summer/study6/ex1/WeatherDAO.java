@@ -123,7 +123,9 @@ public class WeatherDAO {
 
 		String [] files = file.list();
 		for(int i=0;i<files.length;i++) {
+			if(Integer.parseInt(files[i+1])>Integer.parseInt(files[i])) {
 			
+			}
 		}
 //		
 //		Calendar calendar = Calendar.getInstance();
