@@ -8,6 +8,8 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 import java.util.StringTokenizer;
@@ -15,6 +17,10 @@ import java.util.StringTokenizer;
 import com.summer.study4.lang.ex1.Weather;
 
 public class WeatherDAO {
+	private static int count;
+	{
+	WeatherDAO.count=0;	
+	}
 	//DAO : Data Access Object
 	//메소드 getWeathers 
 	//file에서 file 에 내용을 읽어오는 역활 
@@ -106,23 +112,43 @@ public class WeatherDAO {
 		//2.파일명 c > study >save.text 
 		//3.##날씨정보
 		//도시명-기온-정보-습도
+		//20231220 저장할날짜 +count;
+//		WeatherDAO.count++;
 		
-		boolean result = false;
-		File file = new File("c:\\study\\save.txt");
-		FileWriter fw = new FileWriter(file,false);
-		fw.write("##날씨정보");
-		fw.flush();
-		for(WeatherDTO weatherdto : ar) {
-			fw.write("\n");
-			fw.write(weatherdto.getLocal()+"-");
-			fw.write(weatherdto.getTemp()+"-");
-			fw.write(weatherdto.getWeather()+"-");
-			fw.write(weatherdto.getPersent()+"\t");
-			fw.write("\n");
-			fw.flush();
+		File file = new File("c:\\study\\weather1");
+		FileReader fr = new FileReader(file);	
+		BufferedReader br = new BufferedReader(fr);
+		
+		
+
+		String [] files = file.list();
+		for(int i=0;i<files.length;i++) {
 			
 		}
-		fw.close();
+//		
+//		Calendar calendar = Calendar.getInstance();
+//		int year = calendar.get(Calendar.YEAR);
+//		int month = calendar.get(Calendar.MONTH)+1;
+//		int date = calendar.get(Calendar.DATE);
+//		String names = String.valueOf(year)+month+date+WeatherDAO.count+".txt";
+				
+//
+//		File file1 = new File("c:\\study");
+//		String fileName= calendar.getTimeInMillis()+".txt";
+//				file1 = new File(file1,fileName);
+//		FileWriter fw = new FileWriter(file1,false);
+//		fw.write("##날씨정보");
+//		fw.flush();
+//		for(WeatherDTO weatherdto : ar) {
+//			fw.write("\n");
+//			fw.write(weatherdto.getLocal()+"-");
+//			fw.write(weatherdto.getTemp()+"-");
+//			fw.write(weatherdto.getWeather()+"-");
+//			fw.write(weatherdto.getPersent()+"\r");
+//			fw.flush();
+//			
+//		}
+//		fw.close();
 		
 		 
 	
