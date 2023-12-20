@@ -7,6 +7,9 @@ public class WeatherMain {
 		// TODO Auto-generated method stub
 		try {
 			new WeatherController().start();
+			
+			
+			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

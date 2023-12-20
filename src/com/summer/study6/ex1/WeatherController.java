@@ -40,12 +40,33 @@ public class WeatherController {
 		 
 		while(check) {
 			System.out.println("1.날씨 정보 출력");
-			System.out.println("5.프로그램 종료");
+			System.out.println("2.날씨 정보 검색");
+			System.out.println("3.날씨 정보 추가");
+			System.out.println("4.날씨 정보 삭제");
+			System.out.println("5.날씨 정보 저장");
+			System.out.println("6.프로그램 종료");
 			try {
 			int select =sc.nextInt();
 				if(select==1) {
 					this.weatherView.view(ar);
+			}else if(select==2){
+				WeatherDTO w =weatherdao.getDetail(ar, sc);
+					weatherView.view(w);
+				
+			}else if(select==3){
+				boolean flag = weatherdao.add(ar, sc);
+				if(flag){
+					System.out.println("날씨정보 추가됐다");
 				}else {
+					System.out.println("날씨정보 추가실패");
+				}
+			}else if(select==4) {
+				boolean flag = weatherdao.delete(ar, sc);
+			}else if(select==5){
+				
+				weatherdao.save(ar);
+				
+			}else {
 					System.out.println("종료합니다");
 					check = false;
 				}

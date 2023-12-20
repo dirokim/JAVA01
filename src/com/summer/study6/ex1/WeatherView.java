@@ -13,9 +13,19 @@ public class WeatherView {
 			System.out.println(weatherdto.getWeather()+"\t");
 			System.out.println(weatherdto.getPersent()+"%\n");
 			System.out.println("===============================");
-			
-			
-			
+		
 		}
+	}
+	public void view(WeatherDTO weatherdto) {
+		if(weatherdto==null) {
+		System.out.println("값을 못찾았습니다");	
+			return;
+		}
+		System.out.println("도시명\t기온\t날씨\t습도%");
+			System.out.println(weatherdto.getLocal()+"\t");
+			System.out.println(weatherdto.getTemp()+"\t");
+			System.out.println(weatherdto.getWeather()+"\t");
+			System.out.println(weatherdto.getPersent()+"%\n");
+			System.out.println("===============================");
 	}
 }

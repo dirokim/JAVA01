@@ -5,7 +5,7 @@ public class WeatherDTO {
 	private String local;
 	private int temp;
 	private String weather;
-	private double persent;
+	private int persent;
 	
 	
 	
@@ -27,10 +27,10 @@ public class WeatherDTO {
 	public void setWeather(String weather) {
 		this.weather = weather;
 	}
-	public double getPersent() {
+	public int getPersent() {
 		return persent;
 	}
-	public void setPersent(double persent) {
+	public void setPersent(int persent) {
 		this.persent = persent;
 	}
 	

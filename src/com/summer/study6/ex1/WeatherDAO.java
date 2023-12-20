@@ -1,11 +1,18 @@
 package com.summer.study6.ex1;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 import java.util.StringTokenizer;
+
+import com.summer.study4.lang.ex1.Weather;
 
 public class WeatherDAO {
 	//DAO : Data Access Object
@@ -39,7 +46,7 @@ public class WeatherDAO {
 		weatherdto.setLocal(ar.nextToken());
 		weatherdto.setTemp(Integer.parseInt(ar.nextToken()));
 		weatherdto.setWeather(ar.nextToken());
-		weatherdto.setPersent(Double.parseDouble(ar.nextToken()));
+		weatherdto.setPersent(Integer.parseInt(ar.nextToken()));
 		list.add(weatherdto);	
 	}
 
@@ -52,6 +59,74 @@ public class WeatherDAO {
 		br.close();
 		fr.close();
 		return list;
+		
+	}
+	public WeatherDTO getDetail(List<WeatherDTO> ar,Scanner sc) {
+		System.out.println("검색할 도시명");
+		WeatherDTO weatherdto = new WeatherDTO();
+		weatherdto.setLocal(sc.next());
+		for(WeatherDTO w: ar) {
+			if(w.getLocal().equals(weatherdto.getLocal())) {
+				return w;
+			
+			}
+		}
+		return null;
+	}
+	//추가
+	public boolean add(List<WeatherDTO> ar,Scanner sc) {
+		System.out.println("추가할 도시");
+		WeatherDTO weatherdto = new WeatherDTO();
+		System.out.println("추가할 도시명");
+		weatherdto.setLocal(sc.next());
+		System.out.println("추가할 기온");
+		weatherdto.setTemp(sc.nextInt());
+		System.out.println("추가할 날씨");
+		weatherdto.setWeather(sc.next());
+		System.out.println("추가할 퍼센트");
+		weatherdto.setPersent(sc.nextInt());
+		 return ar.add(weatherdto);
+		
+	}
+	
+	public boolean delete (List<WeatherDTO>ar,Scanner sc) {
+		boolean result = false;
+		System.out.println("삭제할 도시명은 ?");
+		String name = sc.next();
+		for(WeatherDTO weatherdto : ar) {
+			if(weatherdto.getLocal().equals(name)) {
+				result = ar.remove(weatherdto);
+				break;
+			}
+		}
+		return result;
+	}
+	public void save (List<WeatherDTO>ar) throws Exception {
+		//1.받아서 파일에 작성
+		//2.파일명 c > study >save.text 
+		//3.##날씨정보
+		//도시명-기온-정보-습도
+		
+		boolean result = false;
+		File file = new File("c:\\study\\save.txt");
+		FileWriter fw = new FileWriter(file,false);
+		fw.write("##날씨정보");
+		fw.flush();
+		for(WeatherDTO weatherdto : ar) {
+			fw.write("\n");
+			fw.write(weatherdto.getLocal()+"-");
+			fw.write(weatherdto.getTemp()+"-");
+			fw.write(weatherdto.getWeather()+"-");
+			fw.write(weatherdto.getPersent()+"\t");
+			fw.write("\n");
+			fw.flush();
+			
+		}
+		fw.close();
+		
+		 
+	
+		
 		
 	}
 
