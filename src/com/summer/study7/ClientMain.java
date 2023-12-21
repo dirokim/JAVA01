@@ -6,7 +6,7 @@ public class ClientMain {
 		// TODO Auto-generated method stub
 
 		try {
-			new Server().s();
+			new Client().send();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
