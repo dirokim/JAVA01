@@ -11,42 +11,40 @@ import java.net.Socket;
 import java.util.Scanner;
 
 public class Server {
-
-	
+	InputStream is;
+	InputStreamReader ir;
+	BufferedReader br;
+	OutputStream os;
+	OutputStreamWriter ow;
+	BufferedWriter bw;
 	public void s() throws Exception {
 		System.out.println("클라이언트가 접속하기를 기다리는중 ");
-		ServerSocket ss = new ServerSocket(8283);
-		
-		
+		ServerSocket ss = new ServerSocket(8282);
 		Socket sc = ss.accept();
 		System.out.println("Client 연결 성공 ");
+		is = sc.getInputStream();
+		ir = new InputStreamReader(is);
+		br = new BufferedReader(ir);
+		os =  sc.getOutputStream();
+		ow = new OutputStreamWriter(os);
+		bw = new BufferedWriter(ow);
+		Scanner sc1 = new Scanner(System.in);	
 		
 		while(true) {
-			System.out.println("클라이언트로부터 메세지받음");
-		InputStream is = sc.getInputStream();
-		InputStreamReader ir = new InputStreamReader(is);
-		BufferedReader br = new BufferedReader(ir);
-		
+		System.out.println("클라이언트로부터 메세지받음");
 		System.out.println(br.readLine());
-
-		//받아서 반대로 클라이언트한테 다시 메세지 전송
-		
-		System.out.println("클라이언트한테 메세지보냄");
-		OutputStream os =  sc.getOutputStream();
-		OutputStreamWriter ow = new OutputStreamWriter(os);
-		BufferedWriter bw = new BufferedWriter(ow);
-		Scanner sc1 = new Scanner(System.in);
+		System.out.println("클라이언트한테 메세지보냄");	
 		String abc = sc1.next();
+		if(abc.toUpperCase().equals("EXIT")) {break;}
 		bw.write(abc+"\n\r");
-		bw.flush();
+		bw.flush();}
 		
-		
-		
-		if(abc.equals("exit")) {
-			break;
-		}
-		}
-		
+		bw.close();
+		ow.close();
+		os.close();
+		br.close();
+		ir.close();
+		is.close();
 		
 		
 		
