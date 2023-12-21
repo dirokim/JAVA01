@@ -122,11 +122,22 @@ public class WeatherDAO {
 		
 
 		String [] files = file.list();
-		for(int i=0;i<files.length;i++) {
-			if(Integer.parseInt(files[i+1])>Integer.parseInt(files[i])) {
+		long [] name = new  long [files.length];
+		long max=0;
+		for(int i = 0; i<files.length;i++) {
+			//split . StringTOken, subStirng
+//			String [] r = files[i].split(".");
+//			name[i]=r[0];
 			
+//			StringTokenizer st = new StringTokenizer(files[i],".");
+//			name[i]=st.nextToken();
+		
+			name[i] = Long.parseLong(files[i].substring(0,files[i].lastIndexOf("."))) ;
+			if(max<name[i]) {
+				max=name[i];
 			}
 		}
+		
 //		
 //		Calendar calendar = Calendar.getInstance();
 //		int year = calendar.get(Calendar.YEAR);
