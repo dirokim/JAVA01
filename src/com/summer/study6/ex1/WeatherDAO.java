@@ -8,6 +8,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -122,8 +123,20 @@ public class WeatherDAO {
 		
 
 		String [] files = file.list();
+		String [] test = {"3.txt","2.txt","4.txt"};
 		long [] name = new  long [files.length];
 		long max=0;
+		
+		Arrays.sort(test); // 배열 정렬
+		Arrays.asList(test);
+		
+		
+		
+		
+		
+		
+		
+		
 		for(int i = 0; i<files.length;i++) {
 			//split . StringTOken, subStirng
 //			String [] r = files[i].split(".");
@@ -138,30 +151,30 @@ public class WeatherDAO {
 			}
 		}
 		
-//		
-//		Calendar calendar = Calendar.getInstance();
-//		int year = calendar.get(Calendar.YEAR);
-//		int month = calendar.get(Calendar.MONTH)+1;
-//		int date = calendar.get(Calendar.DATE);
-//		String names = String.valueOf(year)+month+date+WeatherDAO.count+".txt";
+		
+		Calendar calendar = Calendar.getInstance();
+		int year = calendar.get(Calendar.YEAR);
+		int month = calendar.get(Calendar.MONTH)+1;
+		int date = calendar.get(Calendar.DATE);
+		String names = String.valueOf(year)+month+date+WeatherDAO.count+".txt";
 				
-//
-//		File file1 = new File("c:\\study");
-//		String fileName= calendar.getTimeInMillis()+".txt";
-//				file1 = new File(file1,fileName);
-//		FileWriter fw = new FileWriter(file1,false);
-//		fw.write("##날씨정보");
-//		fw.flush();
-//		for(WeatherDTO weatherdto : ar) {
-//			fw.write("\n");
-//			fw.write(weatherdto.getLocal()+"-");
-//			fw.write(weatherdto.getTemp()+"-");
-//			fw.write(weatherdto.getWeather()+"-");
-//			fw.write(weatherdto.getPersent()+"\r");
-//			fw.flush();
-//			
-//		}
-//		fw.close();
+
+		File file1 = new File("c:\\study");
+		String fileName= calendar.getTimeInMillis()+".txt";
+				file1 = new File(file1,fileName);
+		FileWriter fw = new FileWriter(file1,false);
+		fw.write("##날씨정보");
+		fw.flush();
+		for(WeatherDTO weatherdto : ar) {
+			fw.write("\n");
+			fw.write(weatherdto.getLocal()+"-");
+			fw.write(weatherdto.getTemp()+"-");
+			fw.write(weatherdto.getWeather()+"-");
+			fw.write(weatherdto.getPersent()+"\r");
+			fw.flush();
+			
+		}
+		fw.close();
 		
 		 
 	
