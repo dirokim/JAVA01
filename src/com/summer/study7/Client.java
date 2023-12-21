@@ -14,12 +14,14 @@ import java.net.UnknownHostException;
 import java.util.Scanner;
 
 public class Client {
+	
 	OutputStream os;
 	OutputStreamWriter ow;
 	BufferedWriter bw;
 	InputStream is;
 	InputStreamReader ir;
 	BufferedReader br;
+	
 	public void send() throws Exception {
 		Scanner sc = new Scanner(System.in);
 		Socket socket = new Socket("localhost", 8282);
@@ -38,8 +40,8 @@ public class Client {
 		bw.write(m+"\n\r");
 		bw.flush();
 		System.out.println("서버로부터 메세지받음");
-		System.out.println(br.readLine());}
-		
+		System.out.println(br.readLine());
+		}
 		br.close();
 		ir.close();
 		is.close();

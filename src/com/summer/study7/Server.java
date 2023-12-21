@@ -11,13 +11,16 @@ import java.net.Socket;
 import java.util.Scanner;
 
 public class Server {
+	
 	InputStream is;
 	InputStreamReader ir;
 	BufferedReader br;
 	OutputStream os;
 	OutputStreamWriter ow;
 	BufferedWriter bw;
+	
 	public void s() throws Exception {
+		
 		System.out.println("클라이언트가 접속하기를 기다리는중 ");
 		ServerSocket ss = new ServerSocket(8282);
 		Socket sc = ss.accept();
@@ -35,9 +38,9 @@ public class Server {
 		System.out.println(br.readLine());
 		System.out.println("클라이언트한테 메세지보냄");	
 		String abc = sc1.next();
-		if(abc.toUpperCase().equals("EXIT")) {break;}
 		bw.write(abc+"\n\r");
 		bw.flush();
+		if(abc.toUpperCase().equals("EXIT")) {break;}
 		}
 		bw.close();
 		ow.close();
