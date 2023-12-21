@@ -24,7 +24,6 @@ public class Client {
 		Scanner sc = new Scanner(System.in);
 		Socket socket = new Socket("localhost", 8282);
 		System.out.println("서버와 접속이 되었습니다.");
-		
 		os = socket.getOutputStream(); //0과1 처리
 		ow = new OutputStreamWriter(os);
 		bw = new BufferedWriter(ow);

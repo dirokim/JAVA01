@@ -37,8 +37,8 @@ public class Server {
 		String abc = sc1.next();
 		if(abc.toUpperCase().equals("EXIT")) {break;}
 		bw.write(abc+"\n\r");
-		bw.flush();}
-		
+		bw.flush();
+		}
 		bw.close();
 		ow.close();
 		os.close();
