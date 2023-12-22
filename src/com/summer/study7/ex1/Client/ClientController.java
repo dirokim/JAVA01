@@ -38,7 +38,10 @@ public class ClientController {
 		while(check) {
 			System.out.println("1.날씨 정보 출력");
 			System.out.println("2.날씨 정보 검색");
-			System.out.println("3.프로그램 종료");
+			System.out.println("3.날씨 정보 추가");
+			System.out.println("4.날씨 정보 삭제");
+			System.out.println("5.날씨 정보 저장");
+			System.out.println("6.프로그램 종료");
 			String s = sc.next();
 			bw.write(s+"\n\r");
 			bw.flush();
