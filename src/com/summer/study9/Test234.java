@@ -1,6 +1,6 @@
-package com.summer.study7.ex1.server2;
+package com.summer.study9;
 
-public class Test2 {
+public class Test234 {
 
 	public void start() {
 		
